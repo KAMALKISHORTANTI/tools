@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileCraft - Online Image & PDF Tools</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #4f46e5;
+            --accent: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        /* Navigation */
+        .navbar {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 8rem 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Tools Grid */
+        .tools-section {
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .tool-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .tool-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.2);
+        }
+
+        .tool-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4rem 2rem;
+            background: var(--dark);
+            color: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .tool-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <i class="fas fa-magic"></i>
+                FileCraft
+            </div>
+            <div class="nav-links">
+                <a href="#tools" class="nav-link">Tools</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Transform Your Files in Seconds</h1>
+            <p>Professional-grade tools for images and PDFs - 100% free</p>
+            <div style="margin-top: 2rem;">
+                <button class="cta-button">Start Converting Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Tools Section -->
+    <section class="tools-section" id="tools">
+        <h2 style="text-align: center;">Popular Tools</h2>
+        <div class="tools-grid">
+            <!-- Image Tools -->
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <i class="fas fa-compress-alt"></i>
+              <a href="/img-compress.html" class="tool-link" target="_blank" rel="noopener noreferrer" aria-label="Go to Image Compressor tool">
+    <div class="tool-card">
+        <div class="tool-icon">
+            <i class="fas fa-compress-alt"></i>
+        </div>
+        <h3>Image Compressor</h3>
+        <p>Reduce image size without quality loss</p>
+    </div>
+</a>
+
+<style>
+.tool-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.tool-link:hover {
+    transform: translateY(-3px);
+}
+
+.tool-link:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 15px;
+}
+
+.tool-card {
+    /* Existing card styles */
+    cursor: pointer;
+    position: relative;
+}
+
+.tool-card::after {
+    content: "→";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--primary);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.tool-link:hover .tool-card::after {
+    opacity: 1;
+}
+</style>
+
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <i class="fas fa-file-image"></i>
+                </div>
+                <h3>Image Converter</h3>
+                <p>Convert between JPG, PNG, WEBP formats</p>
+            </div>
+
+            <!-- PDF Tools -->
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <i class="fas fa-file-pdf"></i>
+                </div>
+                <h3>PDF Compressor</h3>
+                <p>Reduce PDF file size efficiently</p>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <i class="fas fa-file-export"></i>
+                </div>
+                <h3>PDF to Word</h3>
+                <p>Convert PDF documents to editable Word files</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-shield-alt" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                <h3>Secure Processing</h3>
+                <p>All files processed in your browser - no server uploads</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-rocket" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                <h3>Instant Results</h3>
+                <p>Quick processing with real-time previews</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-heart" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                <h3>Free Forever</h3>
+                <p>No subscriptions or hidden charges</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
